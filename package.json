@@ -1,0 +1,16 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "start": "live-server"
+  },
+  "keywords": [],
+  "author": "davy@philos.io",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^0.9.2"
+  }
+}
