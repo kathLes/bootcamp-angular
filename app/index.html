@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <title>Book Store</title>
 
     <!-- Page styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
   </head>
@@ -16,7 +16,9 @@
 
     <nav class="teal darken-3">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">should bind the title here</a>
+        <a href="#!" class="brand-logo">
+        <!-- Todo: Bind title -> Bookstore at Crelan -->
+        </a>
         <form class="right col">
           <div class="row">
             <div class="input-field col s12">
@@ -32,24 +34,27 @@
       <div class="col s12 m3 animated fadeInUpSmall">
         <div class="card small">
           <div class="card-image waves-effect waves-block waves-light">
+            <!-- Todo: Bind image here-->
             <img class="activator" src="assets/images/javascript.jpg" alt="something should go here">
           </div>
           <div class="card-content">
+            <!-- Todo: add book's title -->
             <span class="card-title activator grey-text text-darken-4">JavaScript is cool but wait, there's something cooler<i class="mdi-navigation-more-vert right"></i></span>
           </div>
           <div class="card-reveal">
+            <!-- Todo: book's title goes here-->
             <span class="card-title grey-text text-darken-4">JavaScript is cool but wait, there's something cooler<i class="mdi-navigation-close right"></i></span>
-            <p>Do you really want a description here? How can explain that JS is cool but ES6 is cooler</p>
+            <!-- Todo: book's description goes here-->
+            <p>Do you really want a description here? How can I explain that JS is cool but ES6 is cooler</p>
             <p><a href="#">See more details</a></p>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    <script src="lib/angular.js"></script>
     <script src="src/index.js"></script>
   </body>
 </html>
