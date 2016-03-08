@@ -1,24 +1,45 @@
-(function(){
-	'use strict';
+(function () {
+    'use strict';
 
     angular.module('bookstore', [])
         .controller('AppController', AppController)
         .controller('NavBarController', NavBarController)
-        .controller('BooksController', BooksController);
+        .controller('BooksController', BooksController)
+        .filter('search', searchFilter)
+    ;
 
-    function AppController($scope){
+    function AppController($scope) {
         $scope.title = 'Bookstore';
     }
 
-    function NavBarController($scope){
+    function NavBarController($scope) {
         $scope.title = 'Bookstore by Gaël and Kathleen';
     }
 
-    function BooksController($scope){
+    function searchFilter() {
+        return function (value, searchTerm) {
+            console.log(value, searchTerm);
+            if (!searchTerm) {
+                return value;
+            }
+            console.log(value, searchTerm);
+            var result = [];
+            for (var key in value) {
+                var book = value[key];
+                console.log(book);
+                if (book.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) {
+                    result.push(book);
+                }
+            }
+            return result;
+        }
+    }
+
+    function BooksController($scope) {
         $scope.books = getBooks();
     }
 
-    function getBooks(){
+    function getBooks() {
         return [
             {
                 bookID: 09809,
