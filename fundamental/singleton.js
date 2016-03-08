@@ -4,7 +4,6 @@ var Book = function(options){
 	this.topic = options.topic;
 };
 
-
 // Create a singleton book
 var singleton = (function(){
 
@@ -21,7 +20,6 @@ var singleton = (function(){
 
 })();
 
-debugger;
 
 // setting options
 var options = {

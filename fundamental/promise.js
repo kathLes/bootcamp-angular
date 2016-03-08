@@ -5,7 +5,6 @@ $.ajax({
 .error(function(){});
 
 // VS
-
 $.ajax({
 	url: 'api/books'
 }, success, error)
@@ -13,12 +12,8 @@ $.ajax({
 function success(){}
 function error(){}
 
-
 // promise
-fetch('/')
-.then(function(){
-
-});
+fetch('/').then(()=>{});
 
 // Callback
 fetch('/', success);

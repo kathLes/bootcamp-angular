@@ -1,11 +1,8 @@
-angular.module('bookstore', ['ngRoute', 'ngAnimate']);
-
 function Address(args){
 	this.street = args.street;
 	this.zipCode = args.zipCode;
 	this.country = args.country;
 }
-
 
 function Person(args){
 	this.address = new Address(args);
@@ -14,7 +11,6 @@ function Person(args){
 }
 
 var person  = new Person({});
-
 
 function Person(args){
 	this.address = args.address; //
