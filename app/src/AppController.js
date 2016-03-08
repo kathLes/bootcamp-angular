@@ -2,8 +2,8 @@
         angular.module('bookstore')
             .controller('AppController', AppController);
 
-        function AppController($scope) {
-            $scope.title = 'Bookstore';
+        function AppController() {
+            this.title = 'Bookstore';
         }
     })
 ()
