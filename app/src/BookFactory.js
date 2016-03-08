@@ -1,5 +1,5 @@
 (function () {
-
+    'use strict';
     angular.module('bookstore')
         .factory('bookFactory', bookFactory);
 
@@ -12,7 +12,7 @@
     function getBooks() {
         return [
             {
-                bookID: 09809,
+                bookID: 9809,
                 author: 'Davy Mitchel',
                 title: 'Functional JavaScript',
                 description: 'Functional programming in JavaScript',
@@ -21,7 +21,7 @@
                 cover: 'assets/images/javascript.jpg'
             },
             {
-                bookID: 09100,
+                bookID: 9100,
                 author: 'Max Mitchel',
                 title: 'AngularJS: Up and Running',
                 description: 'Enhanced Productivity with Structured Web Apps',
@@ -30,7 +30,7 @@
                 cover: 'assets/images/angularjs.jpg'
             },
             {
-                bookID: 09353,
+                bookID: 9353,
                 author: 'Jesse Cravens, Thomas Q Brady',
                 title: 'Building Web Apps with Ember.js',
                 description: "Build ambitious JavaScript App",
@@ -39,7 +39,7 @@
                 cover: 'assets/images/iot.jpg'
             },
             {
-                bookID: 09353,
+                bookID: 9353,
                 author: 'Jesse Cravens, Thomas Q Brady',
                 title: 'Building Web Apps with Ember.js',
                 description: "Build ambitious JavaScript App",
@@ -48,7 +48,7 @@
                 cover: 'assets/images/datavis.jpg'
             },
             {
-                bookID: 09353,
+                bookID: 9353,
                 author: 'Jesse Cravens, Thomas Q Brady',
                 title: 'ES6: JavaScript Next',
                 description: "This book will cover ES6 entirely and will show you how to use ES6 today.",
@@ -57,7 +57,7 @@
                 cover: 'assets/images/es6.jpg'
             },
             {
-                bookID: 09353,
+                bookID: 9353,
                 author: 'Jesse Cravens, Thomas Q Brady',
                 title: 'Ionic Framework: Building hybrid app',
                 description: "Build Hybrid apps using Angular, Ionic and deliver fast.",
@@ -66,7 +66,7 @@
                 cover: 'assets/images/ionic.jpg'
             },
             {
-                bookID: 09546,
+                bookID: 9546,
                 author: 'Backstop Media, Rick Waldron',
                 title: 'Make: JavaScript Robotics',
                 description: 'Building NodeBots with Raspberry Pi, Arduino, and BeagleBone',

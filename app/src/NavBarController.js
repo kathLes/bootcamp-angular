@@ -1,5 +1,5 @@
 (function () {
-
+    'use strict';
     angular.module('bookstore')
         .controller('NavBarController', NavBarController);
 
