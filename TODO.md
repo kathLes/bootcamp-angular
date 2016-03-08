@@ -22,7 +22,7 @@ NB: Learn more about `ng-repeat`
 Now let's implement our search mechanism
 We will first try to implement the search using evrything we learn yesterday
 - Using the value you get from the input element (`search`) and `ng-model`:
-  - Add a function inside our `BooksController` called `search`
+- Add a function inside our `BooksController` called `search`
 
 Introducing filters in Angular
 - Let's use the filter's filter to do the same job: 

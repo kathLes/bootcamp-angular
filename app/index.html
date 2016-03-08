@@ -1,23 +1,22 @@
 <!doctype html>
-<html>
-  <head>
+<html ng-app="bookstore" >
+  <head ng-controller="AppController">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Book Store</title>
+    <title>{{title}}</title>
 
     <!-- Page styles -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
   </head>
-  <body class="grey lighten-5">
-
-    <nav class="teal darken-3">
+  <body class="grey lighten-5" >
+    <nav class="teal darken-3" ng-controller="NavBarController">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">
-        <!-- Todo: Bind title -> Bookstore at Crelan -->
+            <span>{{title}}</span>
         </a>
         <form class="right col">
           <div class="row">
@@ -30,30 +29,30 @@
       </div>
     </nav>
 
-    <div class="row">
-      <input type="search" ng-model="search">
-      <!-- Container for all the books -->
-      <div class="col s12 m3 animated fadeInUpSmall">
-        <!--Begin: Template for one single book -->
-        <div class="card small">
-          <div class="card-image waves-effect waves-block waves-light">
-            <!-- Todo: Bind image here-->
-            <img class="activator" src="assets/images/javascript.jpg" alt="something should go here">
-          </div>
-          <div class="card-content">
-            <!-- Todo: add book's title -->
-            <span class="card-title activator grey-text text-darken-4">JavaScript is cool but wait, there's something cooler<i class="mdi-navigation-more-vert right"></i></span>
-          </div>
-          <div class="card-reveal">
-            <!-- Todo: book's title goes here-->
-            <span class="card-title grey-text text-darken-4">JavaScript is cool but wait, there's something cooler<i class="mdi-navigation-close right"></i></span>
-            <!-- Todo: book's description goes here-->
-            <p>Do you really want a description here? How can I explain that JS is cool but ES6 is cooler</p>
-            <p><a href="#">See more details</a></p>
-          </div>
+    <div class="row" ng-controller='BooksController'>
+        <input type="search" ng-model="searchTerm">
+        <!-- Container for all the books -->
+        <div class="col s12 m3 animated fadeInUpSmall" ng-repeat="book in books">
+            <!--Begin: Template for one single book -->
+            <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <!-- Todo: Bind image here-->
+                    <img class="activator" src="{{book.cover}}" alt="something should go here">
+                </div>
+                <div class="card-content">
+                    <!-- Todo: add book's title -->
+                    <span class="card-title activator grey-text text-darken-4">{{book.title}}<i class="mdi-navigation-more-vert right"></i></span>
+                </div>
+                <div class="card-reveal">
+                    <!-- Todo: book's title goes here-->
+                    <span class="card-title grey-text text-darken-4">{{book.title}}<i class="mdi-navigation-close right"></i></span>
+                    <!-- Todo: book's description goes here-->
+                    <p>{{book.description}}</p>
+                    <p><a href="#/books/{{book.bookID}}">See more details</a></p>
+                </div>
+            </div>
+            <!-- End: Template for one single book -->
         </div>
-        <!-- End: Template for one single book -->
-      </div>
     </div>
 
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>

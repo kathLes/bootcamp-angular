@@ -1,5 +1,6 @@
-var bookService = function(){
+(function(){
 
+	//Private API
 	function createBook(){}
 	function getBook(){}
 	function saveBook(){}
@@ -13,7 +14,7 @@ var bookService = function(){
 		update: updateBook,
 		remove: deleteBook
 	}
-};
+})();
 
 // How do you consume that?
 var book = bookService();

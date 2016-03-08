@@ -10,7 +10,7 @@ function Person(args){
 	this.age = args.age;
 }
 
-var person  = new Person({});
+let person  = new Person({});
 
 function Person(args){
 	this.address = args.address; //
