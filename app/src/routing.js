@@ -8,19 +8,24 @@
       $routeProvider
         .when('/', {
           templateUrl: 'templates/books.html',
-          controller: 'BooksController'
+          controller: 'BooksController',
+          controllerAs : 'booksModel'
         })
         .when('/books', {
           templateUrl: 'templates/books.html',
-          controller: 'BooksController'
+          controller: 'BooksController',
+          controllerAs : 'booksModel'
         })
         .when('/books/:id', {
           templateUrl: 'templates/bookDetails.html',
-          controller: 'BooksController'
+          controller: 'BookDetailsController',
+          controllerAs : 'detailModel'
         })
         .when('/books/add', {
-          templateUrl: 'templates/books.html',
-          controller: 'BooksController'
+          templateUrl: 'templates/bookDetails.html',
+          controller: 'BookDetailsController',
+          controllerAs : 'detailModel'
         })
+        .otherwise('/');
     }
 })();

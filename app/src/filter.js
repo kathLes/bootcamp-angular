@@ -9,9 +9,9 @@
 
       if(!searchTerm) return books;
 
-      return books.filter((book)=>{
+      return books.filter( function(book){
         return book.description.toLowerCase().indexOf(searchTerm.toLowerCase()) > 0;
-      });
+      })
     }
   }
 })();

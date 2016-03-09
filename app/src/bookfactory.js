@@ -6,10 +6,18 @@
 
   function bookFactory(){
     return {
-      getBooks: getBooks
+      getBooks: getBooks,
+      getBookById : getBookById
     }
   }
-
+  function getBookById(id){
+    var books = getBooks();
+    for(var key in books){
+      if(books[key].bookID.toString() === id){
+        return books[key];
+      }
+    }
+  }
   function getBooks(){
     return [
       {

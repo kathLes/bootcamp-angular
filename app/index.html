@@ -1,5 +1,5 @@
 <!doctype html>
- <html ng-controller="AppController">
+ <html ng-controller="AppController as app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +14,8 @@
   </head>
   <body class="grey lighten-5">
 
-    <div ng-include="templates/navbar.html"/>
-
+    <div ng-include="'templates/navbar.html'"></div>
+    <ng-view></ng-view>
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
     <script src="lib/angular.js"></script>
@@ -24,6 +24,7 @@
     <script src="src/bookfactory.js"></script>
     <script src="src/configuration.js"></script>
     <script src="src/bookscontroller.js"></script>
+    <script src="src/bookdetailscontroller.js"></script>
     <script src="src/appcontroller.js"></script>
     <script src="src/navbarcontroller.js"></script>
     <script src="src/filter.js"></script>

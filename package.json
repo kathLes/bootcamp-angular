@@ -4,17 +4,19 @@
   "description": "bookstore by you",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
-    "deploy": "surge"
+    "deploy": "surge",
+    "start": "live-server --port=8085"
   },
   "keywords": [],
   "author": "davy@philos.io",
   "license": "MIT",
   "devDependencies": {
+    "angular-mocks": "^1.5.0",
     "live-server": "^0.9.2"
   },
   "dependencies": {
     "angular": "^1.4.9",
-    "angular-route": "^1.4.9"
+    "angular-route": "^1.4.9",
+    "karma": "^0.13.22"
   }
 }
