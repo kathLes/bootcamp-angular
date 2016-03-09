@@ -38,5 +38,3 @@ Time to refactor our application
 - Move every single function inside its own file and don't forget to import them from the index.html
 
 Huh, here you should be done for the moment.... Next is coming right after that! Stay tuned...
-
-
