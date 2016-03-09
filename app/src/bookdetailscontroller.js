@@ -1,18 +1,17 @@
-(function(){
-	'use strict';
-
+(function () {
+  'use strict';
   angular.module('bookstore')
-    .controller('BookDetailsController', BookDetailsController)
+    .controller('BookDetailsController', BookDetailsController);
 
-    function BookDetailsController(bf, rp){
-      var booksPromise = bf.getBookById(rp.id);
+  BookDetailsController.$inject = ['$routeParams', 'bookFactory'];
 
-      booksPromise.then(success.bind(this));
-      function success(result) {
-        this.book = result;
-      }
+  function BookDetailsController(rp, bookFactory) {
+    var bookId = rp.id;
+    var bookPromise = bookFactory.getBookById(bookId);
+    bookPromise.then(success.bind(this));
+    function success(response) {
+      this.book = response;
     }
-
-    BookDetailsController.$inject = ['bookFactory', '$routeParams'];
+  }
 
 })();
