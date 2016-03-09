@@ -1,6 +1,6 @@
 <!doctype html>
  <html ng-controller="AppController as app">
-  <head>
+  <head ng-controller="AppController as app">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
     <link rel="stylesheet" href="assets/styles/app.css">
   </head>
-  <body class="grey lighten-5">
-
-    <div ng-include="'templates/navbar.html'"></div>
+  <body class="grey lighten-5" >
+    <ng-include src="'templates/navBar.html'"></ng-include>
     <ng-view></ng-view>
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>

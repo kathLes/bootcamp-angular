@@ -1,5 +1,5 @@
-(function(){
-	'use strict';
+(function () {
+    'use strict';
 
   angular.module('bookstore', ['ngRoute', 'ngMockE2E']);
 
@@ -8,3 +8,4 @@
   });
 
 })();
+

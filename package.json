@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "surge",
+    "test": "karma start",
     "start": "live-server --port=8085"
   },
   "keywords": [],
