@@ -4,6 +4,6 @@
         .controller('NavBarController', NavBarController);
 
     function NavBarController() {
-        this.title = 'Bookstore by Gaël and Kathleen';
+        this.title = 'Bookstore by Kathleen';
     }
 })()
