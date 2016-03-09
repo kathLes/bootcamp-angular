@@ -4,22 +4,45 @@
   angular.module('bookstore')
     .factory('bookFactory', bookFactory);
 
-  function bookFactory(){
+  bookFactory.$inject = ['$q', '$http'];
+
+  function bookFactory($q, $http){
+
     return {
       getBooks: getBooks,
       getBookById : getBookById
     }
   }
+
   function getBookById(id){
+    var deferred = $q.defer();
     var books = getBooks();
+
+    var book;
     for(var key in books){
       if(books[key].bookID.toString() === id){
-        return books[key];
+        book = books[key];
       }
     }
+
+    deferred.resolve(book);
+    return deferred.promise();
   }
   function getBooks(){
-    return [
+    var deferred = $q.defer();
+
+    var booksPromise = $http.get('/api/books');
+    booksPromise.then(success).catch(error);
+    function success(response) {
+      debugger;
+      deferred.resolve(response.data);
+    }
+    function error(resp) {
+      console.log(resp);
+    }
+
+    return deferred.promise;
+    /*return [
       {
         bookID: 9809,
         author: 'Davy Mitchel',
@@ -83,7 +106,7 @@
         category: 'Robotic & Programming',
         cover: 'assets/images/robot.jpg'
       }
-    ];
+    ];*/
   }
 
-})()
+})();

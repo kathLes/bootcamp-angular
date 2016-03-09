@@ -5,8 +5,12 @@
     .controller('BookDetailsController', BookDetailsController)
 
     function BookDetailsController(bf, rp){
-      this.book = bf.getBookById(rp.id);
-      console.log(this.book);
+      var booksPromise = bf.getBookById(rp.id);
+
+      booksPromise.then(success.bind(this));
+      function success(result) {
+        this.book = result;
+      }
     }
 
     BookDetailsController.$inject = ['bookFactory', '$routeParams'];

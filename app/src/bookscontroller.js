@@ -5,7 +5,12 @@
     .controller('BooksController', BooksController)
 
     function BooksController(bookFactory){
-      this.books = bookFactory.getBooks();
+      var booksPromise = bookFactory.getBooks();
+
+      booksPromise.then(success.bind(this));
+      function success(result) {
+        this.books = result;
+      }
     }
 
     BooksController.$inject = ['bookFactory'];
