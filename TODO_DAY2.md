@@ -49,3 +49,6 @@ Here are your new routes:
   - `books` directive
   -  Replace `ng-include` with a directive `cl-navbar
   -  Create a `bookstore` directive that will replace our body content
+
+-Remodel the structure
+-Add ES6
