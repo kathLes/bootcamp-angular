@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 
-  angular.module('bookstore', ['ngRoute']);
+  angular.module('bookstore');
 
   document.addEventListener('DOMContentLoaded', function(){
     angular.bootstrap(document, ['bookstore']);

@@ -1,5 +1,5 @@
 <!doctype html>
- <html ng-controller="AppController as app">
+ <html ng-controller="AppController">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,9 +14,7 @@
   </head>
   <body class="grey lighten-5">
 
-    <div ng-include="'templates/navbar.html'"></div>
-
-    <ng-view></ng-view>
+    <div ng-include="templates/navbar.html"/>
 
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>

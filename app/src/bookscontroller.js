@@ -7,5 +7,7 @@
     function BooksController(bookFactory){
       this.books = bookFactory.getBooks();
     }
-    
+
+    BooksController.$inject = ['bookFactory'];
+
 })();
