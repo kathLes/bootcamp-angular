@@ -1,28 +1,27 @@
-(function(){
+(function () {
 
-  function mocks($httpBackend){
+  angular.module('bookstore').run(mocks);
+
+  function mocks($httpBackend) {
     $httpBackend.whenGET('/api/books').respond(getBooks());
 
     $httpBackend.whenGET(new RegExp('\\/books\\/[0-9]+'))
-    .respond(function(method, url){
-      var regexp = new RegExp('\\/books\\/([0-9]+)');
-      var bookID = url.match(regexp)[1];
-      var book = getBooks().filter(function(book){
-        return book.bookID === Number(bookID);
-      })[0];
+      .respond(function (method, url) {
+        var regexp = new RegExp('\\/books\\/([0-9]+)');
+        var bookID = url.match(regexp)[1];
+        var book = getBooks().filter(function (book) {
+          return book.bookID === Number(bookID);
+        })[0];
 
-      return [200, book];
-    });
+        return [200, book];
+      });
 
     $httpBackend.whenGET().passThrough();
-
-
-    angular.module('bookstore').run(mocks)
-}
+  }
 
 })();
 
-function getBooks(){
+function getBooks() {
   return [
     {
       bookID: 9809,
@@ -55,7 +54,7 @@ function getBooks(){
       bookID: 9300,
       author: 'Jesse Cravens, Thomas Q Brady',
       title: 'Data visualisation in JavaScript',
-      description:'Building data visualisation apps using JavaScript',
+      description: 'Building data visualisation apps using JavaScript',
       price: 20.99,
       category: 'Web Frameworks',
       cover: 'assets/img/datavis.jpg'

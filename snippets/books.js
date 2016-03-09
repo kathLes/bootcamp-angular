@@ -7,7 +7,7 @@ function getBooks(){
 		      description: 'Functional programming in JavaScript',
 		      price: 29.99,
 		      category: 'Programming language',
-		      cover: 'assets/images/javascript.jpg'
+		      cover: 'assets/img/javascript.jpg'
 		    },
 		    {
 		      bookID: 09100,
@@ -16,7 +16,7 @@ function getBooks(){
 		      description: 'Enhanced Productivity with Structured Web Apps',
 		      price: 19.99,
 		      category: 'Web Frameworks',
-		      cover: 'assets/images/angularjs.jpg'
+		      cover: 'assets/img/angularjs.jpg'
 		    },
 		    {
 		      bookID: 09353,
@@ -25,7 +25,7 @@ function getBooks(){
 		      description: "Build ambitious JavaScript App",
 		      price: 9.99,
 		      category: 'Web Frameworks',
-		      cover: 'assets/images/iot.jpg'
+		      cover: 'assets/img/iot.jpg'
 		    },
 		    {
 		      bookID: 09353,
@@ -34,7 +34,7 @@ function getBooks(){
 		      description: "Build ambitious JavaScript App",
 		      price: 9.99,
 		      category: 'Web Frameworks',
-		      cover: 'assets/images/datavis.jpg'
+		      cover: 'assets/img/datavis.jpg'
 		    },
 		    {
 		      bookID: 09353,
@@ -43,7 +43,7 @@ function getBooks(){
 		      description: "This book will cover ES6 entirely and will show you how to use ES6 today.",
 		      price: 9.99,
 		      category: 'Web Frameworks',
-		      cover: 'assets/images/es6.jpg'
+		      cover: 'assets/img/es6.jpg'
 		    },
 		    {
 		      bookID: 09353,
@@ -52,7 +52,7 @@ function getBooks(){
 		      description: "Build Hybrid apps using Angular, Ionic and deliver fast.",
 		      price: 9.99,
 		      category: 'Web Frameworks',
-		      cover: 'assets/images/ionic.jpg'
+		      cover: 'assets/img/ionic.jpg'
 		    },
 		    {
 		      bookID: 09546,
@@ -61,7 +61,7 @@ function getBooks(){
 		      description: 'Building NodeBots with Raspberry Pi, Arduino, and BeagleBone',
 		      price: 9.99,
 		      category: 'Robotic & Programming',
-		      cover: 'assets/images/robot.jpg'
+		      cover: 'assets/img/robot.jpg'
 		    }
 		  ];
 	}
