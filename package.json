@@ -1,11 +1,11 @@
 {
   "name": "bookstore",
   "version": "1.0.0",
-  "description": "",
+  "description": "bookstore by you",
   "main": "index.js",
   "scripts": {
-    "test": "karma start",
-    "start": "live-server"
+    "start": "live-server",
+    "deploy": "surge"
   },
   "keywords": [],
   "author": "davy@philos.io",
