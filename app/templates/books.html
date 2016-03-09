@@ -1,0 +1,27 @@
+<div class="row" ng-controller='BooksController as model'>
+  <input type="search" ng-model="model.searchTerm">
+  <!-- Container for all the books -->
+  <div class="col s12 m3 animated fadeInUpSmall" ng-repeat="book in model.books | filter:model.searchTerm">
+    <!--Begin: Template for one single book -->
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <!-- Todo: Bind image here-->
+        <img class="activator" ng-src="{{book.cover}}" alt="{{book.title}}">
+      </div>
+      <div class="card-content">
+        <!-- Todo: add book's title -->
+        <span class="card-title activator grey-text text-darken-4">{{book.title}}<i class="mdi-navigation-more-vert right"></i></span>
+      </div>
+      <div class="card-reveal">
+        <!-- Todo: book's title goes here-->
+        <span class="card-title grey-text text-darken-4">{{book.title}}<i class="mdi-navigation-close right"></i></span>
+        <!-- Todo: book's description goes here-->
+        <p>{{book.description}}</p>
+        <p><a ng-href="#/books/{{book.bookID}}">See more details</a></p>
+      </div>
+    </div>
+    <!-- End: Template for one single book -->
+  </div>
+</div>
+
+
